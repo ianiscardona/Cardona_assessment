@@ -11,63 +11,22 @@
   --secondaryColor: #0083c4;
   --textColor: #eee;
 }
-/* header {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  width: 100vw;
-  height: 124px;
-  padding: 50px 90px 0px 90px;
-  background-color: var(--mainColor);
-  color: var(--textColor);
-} */
-header .anime-binge {
+.anime-binge {
   font-family: "Outfit", sans-serif;
   color: var(--textColor);
 }
-header nav .button-blue {
+.button-blue {
   background: #106580;
 }
-header nav .nav-link {
+.nav-link {
   font-family: "Avenir LT Std", sans-serif;
   color: var(--textColor);
   font-size: 14px;
   letter-spacing: 0.05em;
 }
+.home-display {
+  max-width: 50%;
+}
 .preview-image {
   background-image: url(../public/images/tanjiro_nezuko.jpg);
 }
-/* nav {
-  overflow: hidden;
-}
-nav a {
-  margin-right: 16px;
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-nav ul li {
-  display: inline-block;
-  list-style-type: none;
-}
-nav ul li:first-child {
-  margin-right: auto;
-}
-nav ul li .nav-link {
-  display: block;
-  padding: 1em 2em;
-
-  font-family: "Avenir LT Std", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #ffffff;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-} */

@@ -6,14 +6,14 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="md:container md:px-20 flex relative justify-between pt-14 bg-black">
-      <h3 className="font-bold text-2xl">
+    <header className="flex justify-between items-end content-end h-24 max-w-full mx-auto px-20 bg-black">
+      <h1 className="font-bold text-2xl">
         <Link to="/" className="anime-binge">
           AnimeBinge
         </Link>
-      </h3>
-      <nav className="flex overflow-hidden justify-end">
-        <ul className="flex items-center md:space-x-20">
+      </h1>
+      <nav className="flex justify-end">
+        <ul className="flex items-center md:space-x-14">
           <li>
             <Link to="/" className="nav-link font-thin">
               Home
