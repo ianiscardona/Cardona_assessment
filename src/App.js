@@ -6,10 +6,11 @@ import { Discovery } from "./components/Discovery.js";
 import { Login } from "./components/Login.js";
 import { Signup } from "./components/Signup.js";
 import { NoMatch } from "./components/NoMatch.js";
+import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -19,7 +20,7 @@ function App() {
         <Route path="login" element={<Login />}></Route>
         <Route path="*" element={<NoMatch />}></Route>
       </Routes>
-    </>
+    </div>
   );
 }
 
