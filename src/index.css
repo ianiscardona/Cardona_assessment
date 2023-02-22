@@ -28,6 +28,21 @@
 .preview-trending {
   background: url("/public/images/aot/aot_1.jpg") center center/cover;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(28, 25, 23);
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(28, 25, 23);
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(54, 49, 47);
+  border-radius: 30px;
+}
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

@@ -29,4 +29,11 @@ export default [
     categories: "Adventure fiction, Marial Arts, Dark Fantasy",
     image: "csm/csm_1.jpg",
   },
+  {
+    id: 5,
+    name: "Jojo's Bizarre Adventure",
+    rating: "5.0",
+    categories: "Adventure fiction, Marial Arts, Dark Fantasy, LGBTQ+IA",
+    image: "jjba/jjba6.jpeg",
+  },
 ];
