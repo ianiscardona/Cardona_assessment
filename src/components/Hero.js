@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <div className="z-0">
-      <section className="p-20 flex flex-col h-screen preview-image">
-        <div className="h-screen flex relative items-center">
-          <div className="absolute h- content-center w-[45%] space-y-5">
+    <div className="">
+      <section className="relative flex flex-col h-[110vh]">
+        <div className="w-full h-full preview-image absolute"></div>
+        <div className="bg-gradient-to-r from-black via-transparent to-black w-full h-full absolute"></div>
+        <div className="mx-20 mt-24 h-screen flex relative items-center">
+          <div className="absolute content-center w-[45%] space-y-5">
             <h1 className="text-white text-[76px] leading-none font-bold font-outfit tracking-wide antialiased">
               Kimetsu no Yaiba
             </h1>
@@ -49,7 +51,7 @@ export const Hero = () => {
             </ul>
           </div>
         </div>
-        <div className="flex justify-start">
+        <div className="mx-20 mb-20 max-w-full flex justify-between relative items-center">
           <ul className="flex items-center md:space-x-5">
             <li>
               <Link
@@ -75,6 +77,12 @@ export const Hero = () => {
                 Details
               </Link>
             </li>
+          </ul>
+          <ul className="flex items-center  md:space-x-1">
+            <li className="w-6 h-5 bg-white rounded-full hover:bg-[#106580] hover:w-24 transition-all"></li>
+            <li className="w-6 h-5 bg-white rounded-full hover:bg-[#106580] hover:w-24 transition-all"></li>
+            <li className="w-6 h-5 bg-white rounded-full hover:bg-[#106580] hover:w-24 transition-all"></li>
+            <li className="w-6 h-5 bg-white rounded-full hover:bg-[#106580] hover:w-24 transition-all"></li>
           </ul>
         </div>
       </section>

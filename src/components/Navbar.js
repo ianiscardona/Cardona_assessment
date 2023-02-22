@@ -6,8 +6,8 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="z-20 flex justify-between items-end content-end h-24 max-w-full mx-auto px-20 bg-black">
-      <h1 className="flex h-10 font-bold text-2xl items-center">
+    <header className="flex justify-between items-end z-10 h-24 w-full mx-auto px-20 absolute">
+      <h1 className="flex h-10 font-bold text-2xl items-center cursor-pointer">
         <Link to="/" className="font-outfit text-white antialiased">
           AnimeBinge
         </Link>

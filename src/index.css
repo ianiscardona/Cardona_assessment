@@ -23,16 +23,19 @@
   color: var(--textColor);
 }
 .preview-image {
-  background: url("/public/images/tanjiro_nezuko.jpg") center center/cover
-    no-repeat;
-  width: 100%;
-  height: 100%;
+  background: url("/public/images/kny/kny_1.jpg") center center/cover no-repeat;
 }
 .preview-trending {
-  background: url("/public/images/attack_on_titan_1.jpg") center center/cover;
+  background: url("/public/images/aot/aot_1.jpg") center center/cover;
 }
-.vignette {
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 1000px rgba(0, 0, 0, 0.9) inset;
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.modal-transition {
+  transition: ease 300ms;
 }

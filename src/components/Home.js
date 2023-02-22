@@ -1,12 +1,12 @@
 import React from "react";
 import { Hero } from "./Hero";
-import { Suggestions } from "./Suggestions";
+import { Trending } from "./Trending";
 
 export const Home = () => {
   return (
-    <div className="min-w-full">
+    <div className="min-w-full z-0">
       <Hero />
-      <Suggestions />
+      <Trending />
     </div>
   );
 };
