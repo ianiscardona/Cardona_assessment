@@ -3,18 +3,22 @@ import { TrendWeek } from "./TrendingWeek";
 import { TrendThrowback } from "./TrendingTB";
 import AnimeData from "../data/AnimeData";
 import ThrowbackData from "../data/ThrowbackData";
+import { Link } from "react-router-dom";
+import slugify from "react-slugify";
 
 export const Trending = (props) => {
   // properties
   const trending = AnimeData.map((details) => {
     return (
-      <TrendWeek
-        key={details.id}
-        name={details.name}
-        rating={details.rating}
-        categories={details.categories}
-        image={details.image}
-      />
+      <Link to={`${slugify(details.name)}`}>
+        <TrendWeek
+          key={details.id}
+          name={details.name}
+          rating={details.rating}
+          categories={details.categories}
+          image={details.image}
+        />
+      </Link>
     );
   });
 

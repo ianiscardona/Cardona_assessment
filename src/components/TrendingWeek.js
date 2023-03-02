@@ -18,7 +18,7 @@ export const TrendWeek = (props) => {
     <div className="">
       {/* {openModal && <TrendWeekSeriesModal close={close} />} */}
       <button
-        onClick={() => navigate("/trending-week-series")}
+        onClick={() => navigate(":name")}
         className="w-[600px] h-[337px] rounded-3xl relative overflow-hidden hover:shadow-[0_4px_10px_-3px_rgba(196,196,196,0.4)] hover:ease-out hover:duration-300 snap-start"
       >
         <img

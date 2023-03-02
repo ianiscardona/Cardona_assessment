@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { EpisodeCard } from "./EpisodeCard";
 import EpisodesData from "../data/EpisodesData";
+import AnimeData from "../data/AnimeData";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useParams } from "react-router-dom";
+import slugify from "react-slugify";
 
 export const TrendingWeekSeriesModal = (props) => {
+  const { name } = useParams();
+  const [show, setShow] = useState();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setShow(AnimeData.find((data) => slugify(data.name) === name));
+    console.log(AnimeData.find((data) => data.name === name));
+  }, [name]);
+
   const episodes = EpisodesData.map((details) => {
     return (
       <EpisodeCard
@@ -57,7 +68,7 @@ export const TrendingWeekSeriesModal = (props) => {
           <text className="text-[#FBC94A]"> this week</text>
         </button>
       </div>
-      <div className="z-0 relative flex columns-2 w-full h-fit">
+      <div className="z-0 relative flex flex-col columns-2 w-full h-fit xl:flex-row">
         <div className="mr-5 flex flex-col">
           <div className="rounded-2xl w-[600px] h-[690px] relative overflow-hidden">
             <div className="h-full w-full preview-trending absolute scale-110"></div>
@@ -69,12 +80,12 @@ export const TrendingWeekSeriesModal = (props) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Attack on Titan
+                {show?.name}
               </motion.h1>
               <ul className="flex items-end w-full justify-between">
                 <li>
                   <p className="text-white text-xs font-normal font-outfit antialiased">
-                    Category: Adventure fiction, Dark fantasy, Martial Arts
+                    {show?.categories}
                   </p>
                 </li>
                 <li>
@@ -87,7 +98,7 @@ export const TrendingWeekSeriesModal = (props) => {
                     <div className="text-[#FBC94A]">
                       <FaStar size={20} />
                     </div>
-                    <div>5.0</div>
+                    <div>{show?.ratings}</div>
                   </motion.p>
                 </li>
               </ul>
@@ -101,15 +112,11 @@ export const TrendingWeekSeriesModal = (props) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
             >
-              When man-eating Titans first appeared 100 years ago, humans found
-              safety behind massive walls that stopped the giants in their
-              tracks. But the safety they have had for so long is threatened
-              when a colossal Titan smashes through the barriers, causing a
-              flood of the giants into what had been the human...
+              {show?.description}
             </motion.text>
           </div>
         </div>
-        <div className="flex flex-col justify-items-end w-full">
+        <div className="flex flex-col justify-items-end max-w-full">
           <div className="overflow-y-scroll px-6 min-h-screen">{episodes}</div>
         </div>
       </div>

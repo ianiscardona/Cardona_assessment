@@ -19,10 +19,7 @@ function App() {
         <Route path="about" element={<About />}></Route>
         <Route path="signup" element={<Signup />}></Route>
         <Route path="login" element={<Login />}></Route>
-        <Route
-          path="trending-week-series"
-          element={<TrendingWeekSeries />}
-        ></Route>
+        <Route path=":name" element={<TrendingWeekSeries />}></Route>
         <Route path="*" element={<NoMatch />}></Route>
       </Routes>
     </div>
