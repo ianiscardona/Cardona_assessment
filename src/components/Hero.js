@@ -24,7 +24,7 @@ export const Hero = () => {
         </div>
         <div className="bg-gradient-to-r from-black via-transparent to-black w-full h-full absolute"></div>
         <div className="mx-20 mt-24 h-screen flex relative items-center">
-          <div className="absolute content-center w-[45%] space-y-5">
+          <div className="absolute content-center w-full space-y-5">
             <h1 className="text-white text-[76px] leading-none font-bold font-outfit tracking-wide antialiased">
               Kimetsu no Yaiba
             </h1>
@@ -43,7 +43,7 @@ export const Hero = () => {
                 </p>
               </li>
             </ul>
-            <p className="text-white text-base font-normal font-outfit antialiased">
+            <p className="text-white text-base font-normal font-outfit antialiased w-full lg:w-[45%]">
               Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written
               and illustrated by Koyoharu Gotouge. It follows teenage Tanjiro
               Kamado, who strives to become a demon slayer after his family was

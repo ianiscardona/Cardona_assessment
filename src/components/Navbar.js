@@ -1,4 +1,5 @@
 import React from "react";
+import { FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -6,15 +7,21 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="flex justify-between items-end z-10 h-24 w-full mx-auto px-20 absolute">
-      <h1 className="flex h-10 font-bold text-2xl items-center cursor-pointer">
+    <header className="flex-wrap justify-between items-end z-10 h-24 w-full px-20 absolute md:flex md:mt-0">
+      <h1 className="flex h-10 justify-between font-bold text-2xl mt-14 items-center cursor-pointer md:mt-0">
         <Link to="/" className="font-outfit text-white antialiased">
           AnimeBinge
         </Link>
+        <span className="text-white flex h-6 font-bold text-2xl md:hidden">
+          <button>
+            <FaBars />
+          </button>
+        </span>
       </h1>
-      <nav className="flex justify-end">
-        <ul className="flex items-center md:space-x-14">
-          <li>
+
+      <nav className="justify-end md:flex z-[-1] md:z-auto opacity-0 md:opacity-100 transition-all ease-in-out -top-96 duration-300 ">
+        <ul className="items-center md:flex md:space-x-3 xl:space-x-7 lg:space-x-14 md:my-0 ">
+          <li className="my-5 md:my-0">
             <Link
               to="/"
               className="nav-link font-normal text-base tracking-tighter antialiased underline-offset-8 hover:underline"
@@ -22,7 +29,7 @@ export const Navbar = () => {
               Home
             </Link>
           </li>
-          <li>
+          <li className="my-5 md:my-0">
             <Link
               to="/discovery"
               className="nav-link font-normal text-base tracking-tighter antialiased underline-offset-8 hover:underline"
@@ -30,7 +37,7 @@ export const Navbar = () => {
               Discover
             </Link>
           </li>
-          <li>
+          <li className="my-5 md:my-0">
             <Link
               to="/about"
               className="nav-link font-normal text-base tracking-tighter antialiased underline-offset-8 hover:underline"
@@ -38,7 +45,7 @@ export const Navbar = () => {
               About Us
             </Link>
           </li>
-          <li>
+          <li className="my-5 md:my-0">
             <button
               className="nav-link font-normal text-base tracking-tighter antialiased rounded-md w-28 h-11 border-solid border-white border border-sm hover:bg-white hover:text-black"
               onClick={() => navigate("/signup")}
@@ -46,7 +53,7 @@ export const Navbar = () => {
               Sign Up
             </button>
           </li>
-          <li>
+          <li className="my-5 md:my-0">
             <button
               className="nav-link font-normal text-base tracking-tighter antialiased rounded-md w-28 h-11 border-solid border-sm button-blue hover:bg-white hover:text-black"
               onClick={() => navigate("/login")}
