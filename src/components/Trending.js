@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { TrendWeek } from "./TrendWeek";
-import { TrendThrowback } from "./TrendThrowback";
+import { TrendWeek } from "./TrendingWeek";
+import { TrendThrowback } from "./TrendingTB";
 import AnimeData from "../data/AnimeData";
 import ThrowbackData from "../data/ThrowbackData";
 

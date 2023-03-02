@@ -1,27 +1,30 @@
 import { FaStar } from "react-icons/fa";
-import React, { useState } from "react";
-import { TrendWeekSeriesModal } from "./TrendWeekSeriesModal";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+// import { TrendWeekSeriesModal } from "./TrendWSeriesModal";
 
 export const TrendWeek = (props) => {
-  const [openModal, setOpenModal] = useState(false);
+  const navigate = useNavigate();
+  // const [openModal, setOpenModal] = useState(false);
 
-  function open() {
-    setOpenModal(true);
-  }
-  function close() {
-    setOpenModal(false);
-  }
+  // function open() {
+  //   setOpenModal(true);
+  // }
+  // function close() {
+  //   setOpenModal(false);
+  // }
 
   return (
     <div className="">
-      {openModal && <TrendWeekSeriesModal close={close} />}
+      {/* {openModal && <TrendWeekSeriesModal close={close} />} */}
       <button
-        onClick={open}
+        onClick={() => navigate("/trending-week-series")}
         className="w-[600px] h-[337px] rounded-3xl relative overflow-hidden hover:shadow-[0_4px_10px_-3px_rgba(196,196,196,0.4)] hover:ease-out hover:duration-300 snap-start"
       >
         <img
           src={`../images/${props.image}`}
           className="h-full w-full object-cover absolute"
+          alt=""
         ></img>
         <div className="bg-gradient-to-t from-black w-full h-full absolute"></div>
         <div className="px-7 pb-5 h-full flex relative justify-end items-start flex-col">

@@ -2,15 +2,18 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { EpisodeCard } from "./EpisodeCard";
 import EpisodesData from "../data/EpisodesData";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-export const TrendWeekSeriesModal = (props) => {
+export const TrendingWeekSeriesModal = (props) => {
+  const navigate = useNavigate();
   const episodes = EpisodesData.map((details) => {
     return (
       <EpisodeCard
         key={details.id}
         description={details.description}
         episode={details.episode}
+        image={details.image}
       />
     );
   });
@@ -22,35 +25,41 @@ export const TrendWeekSeriesModal = (props) => {
 
   const modalTransition = { duration: 0.5 };
 
-  const titleVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // const titleVariants = {
+  //   hidden: { opacity: 0, y: -50 },
+  //   visible: { opacity: 1, y: 0 },
+  // };
 
-  const ratingVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
+  // const ratingVariants = {
+  //   hidden: { opacity: 0, x: -50 },
+  //   visible: { opacity: 1, x: 0 },
+  // };
 
-  const descriptionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
+  // const descriptionVariants = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   visible: { opacity: 1, y: 0 },
+  // };
 
   return (
     <motion.div
-      className="absolute pr-20 pb-16 z-20 bg-stone-900"
+      className="relative w-full px-20 py-16 z-20 bg-stone-900"
       variants={modalVariants}
       initial="hidden"
       animate="visible"
       transition={modalTransition}
     >
-      <div className="flex columns-2 w-full">
+      <div className="w-auto pb-7">
+        <button
+          className="text-white text-[34px] leading-none font-bold font-outfit tracking-wide antialiased"
+          onClick={() => navigate("/")}
+        >
+          Trending
+          <text className="text-[#FBC94A]"> this week</text>
+        </button>
+      </div>
+      <div className="z-0 relative flex columns-2 w-full h-fit">
         <div className="mr-5 flex flex-col">
-          <button
-            onClick={props.close}
-            className="rounded-2xl w-[600px] h-[690px] relative overflow-hidden"
-          >
+          <div className="rounded-2xl w-[600px] h-[690px] relative overflow-hidden">
             <div className="h-full w-full preview-trending absolute scale-110"></div>
             <div className="bg-gradient-to-t from-black w-full h-full absolute"></div>
             <div className="px-9 pb-9 h-full flex relative justify-end items-start flex-col">
@@ -83,7 +92,7 @@ export const TrendWeekSeriesModal = (props) => {
                 </li>
               </ul>
             </div>
-          </button>
+          </div>
           <div className="w-[600px] py-4">
             <motion.text
               id=""
@@ -101,12 +110,7 @@ export const TrendWeekSeriesModal = (props) => {
           </div>
         </div>
         <div className="flex flex-col justify-items-end w-full">
-          <div
-            className="w-full overflow-y-scroll overscroll-contain px-6"
-            style={{ height: "600px" }}
-          >
-            {episodes}
-          </div>
+          <div className="overflow-y-scroll px-6 min-h-screen">{episodes}</div>
         </div>
       </div>
     </motion.div>
