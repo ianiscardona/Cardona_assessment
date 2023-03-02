@@ -1,12 +1,27 @@
 import React from "react";
 import { FaHeart, FaPlay, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+// import { Carousel } from "react-responsive-carousel";
+// import ImagesData from "../data/ImagesData";
 
 export const Hero = () => {
   return (
     <div className="">
       <section className="relative flex flex-col h-[110vh]">
-        <div className="w-full h-full preview-image absolute"></div>
+        <div className="w-full preview-image h-full absolute">
+          {/* <Carousel
+            showArrows={false}
+            showStatus={false}
+            showThumbs={false}
+            infiniteLoop={true}
+          >
+            {ImagesData.map((image, index) => (
+              <div key={index}>
+                <img src={image} alt={`slide ${index}`} />
+              </div>
+            ))}
+          </Carousel> */}
+        </div>
         <div className="bg-gradient-to-r from-black via-transparent to-black w-full h-full absolute"></div>
         <div className="mx-20 mt-24 h-screen flex relative items-center">
           <div className="absolute content-center w-[45%] space-y-5">

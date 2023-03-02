@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Throwback = (props) => {
+export const TrendThrowback = (props) => {
   return (
     <div className="w-[440px] h-[450px] rounded-3xl border-2 relative overflow-hidden">
       <img

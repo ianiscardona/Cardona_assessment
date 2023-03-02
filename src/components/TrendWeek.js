@@ -1,8 +1,8 @@
 import { FaStar } from "react-icons/fa";
 import React, { useState } from "react";
-import { ShowModal } from "./ShowModal";
+import { TrendWeekSeriesModal } from "./TrendWeekSeriesModal";
 
-export const TrendingNow = (props) => {
+export const TrendWeek = (props) => {
   const [openModal, setOpenModal] = useState(false);
 
   function open() {
@@ -14,7 +14,7 @@ export const TrendingNow = (props) => {
 
   return (
     <div className="">
-      {openModal && <ShowModal close={close} />}
+      {openModal && <TrendWeekSeriesModal close={close} />}
       <button
         onClick={open}
         className="w-[600px] h-[337px] rounded-3xl relative overflow-hidden hover:shadow-[0_4px_10px_-3px_rgba(196,196,196,0.4)] hover:ease-out hover:duration-300 snap-start"

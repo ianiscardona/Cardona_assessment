@@ -1,6 +1,6 @@
 import React from "react";
-import { Hero } from "./Hero";
-import { Trending } from "./Trending";
+import { Hero } from "../components/Hero";
+import { Trending } from "../components/Trending";
 
 export const Home = () => {
   return (
