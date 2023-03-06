@@ -36,21 +36,6 @@ export const TrendingWeekSeriesModal = (props) => {
 
   const modalTransition = { duration: 0.5 };
 
-  // const titleVariants = {
-  //   hidden: { opacity: 0, y: -50 },
-  //   visible: { opacity: 1, y: 0 },
-  // };
-
-  // const ratingVariants = {
-  //   hidden: { opacity: 0, x: -50 },
-  //   visible: { opacity: 1, x: 0 },
-  // };
-
-  // const descriptionVariants = {
-  //   hidden: { opacity: 0, y: 50 },
-  //   visible: { opacity: 1, y: 0 },
-  // };
-
   return (
     <motion.div
       className="relative w-full px-20 py-16 z-20 bg-stone-900"
@@ -71,7 +56,11 @@ export const TrendingWeekSeriesModal = (props) => {
       <div className="z-0 relative flex flex-col columns-2 w-full h-fit xl:flex-row">
         <div className="mr-5 flex flex-col">
           <div className="rounded-2xl w-[600px] h-[690px] relative overflow-hidden">
-            <div className="h-full w-full preview-trending absolute scale-110"></div>
+            <img
+              src={`../images/${show?.image}`}
+              className="h-full w-full object-cover absolute scale-110"
+              alt=""
+            ></img>
             <div className="bg-gradient-to-t from-black w-full h-full absolute"></div>
             <div className="px-9 pb-9 h-full flex relative justify-end items-start flex-col">
               <motion.h1

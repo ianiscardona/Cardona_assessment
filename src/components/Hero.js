@@ -67,7 +67,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="mx-20 mb-20 max-w-full flex justify-between relative items-center">
-          <ul className="flex items-center md:space-x-5">
+          <ul className="flex items-center space-x-2 md:space-x-5">
             <li>
               <Link
                 to="/"
@@ -93,7 +93,7 @@ export const Hero = () => {
               </Link>
             </li>
           </ul>
-          <ul className="flex items-center  md:space-x-1">
+          <ul className="flex items-center space-x-1 md:space-x-1">
             <li className="w-6 h-5 bg-white rounded-full hover:bg-[#106580] hover:w-24 transition-all"></li>
             <li className="w-6 h-5 bg-white rounded-full hover:bg-[#106580] hover:w-24 transition-all"></li>
             <li className="w-6 h-5 bg-white rounded-full hover:bg-[#106580] hover:w-24 transition-all"></li>
